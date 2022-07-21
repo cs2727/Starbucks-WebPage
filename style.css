@@ -1,0 +1,339 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    position: relative;
+}
+
+#wrapper {
+    padding-block: 2em;
+    padding-inline: 10em;
+    position: relative;
+    z-index: 1;
+}
+
+
+#circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    clip-path: circle(40% at 80% 100%);
+}
+
+
+
+
+/* Header related stylings */
+
+header {
+    display: flex;
+    margin-bottom: 5em;
+    background-color: orange;
+    position: relative;
+}
+
+
+header ul {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 700px;
+    left: 40%;
+    list-style: none;
+}
+
+header ul a{
+   font-size: 1.3rem;
+   position: relative;
+   text-decoration: none;
+   color: black;
+}
+
+
+
+
+
+/* Main Related Stylings */
+
+main {
+    display: flex;
+    position: relative;
+}
+
+main #detailsContainer {
+    flex-basis: 50%;
+}
+
+main #detailsContainer h1 {
+    font-size: 5rem;
+}
+
+main #detailsContainer h1 {
+    font-size: 5rem;
+}
+
+main #detailsContainer h1 span {
+    color: green;
+}
+
+main #detailsContainer p {
+    font-size: 1.8em;
+}
+
+main #detailsContainer button {
+    height: 50px;
+    width: 180px;
+    border-radius: 100px;
+    background-color: green;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+main #drinksImageContainer {
+    flex-basis: 40%;
+}
+
+main #drinksImageContainer img{
+    width: 70%;
+}
+
+ #socialMediaContainer {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    display: flex;
+    padding: 1em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-direction: column;
+    background-color: green;
+    
+}
+
+ #socialMediaContainer img:nth-child(1) {
+    height: 28px;
+    width: 24px; 
+    cursor: pointer;
+}
+
+
+#socialMediaContainer img:nth-child(2) {
+    margin-block: 2em;
+    width: 28px;
+}
+
+#socialMediaContainer img:nth-child(3) {
+    width: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries ----------------- */
+
+@media only screen and (max-width: 1880px) {
+ 
+
+    header ul {
+        width: 800px;
+        left: 35%;
+    }
+
+
+    main #drinksImageContainer {
+        margin-left: 5em;
+    }
+
+    main #drinksImageContainer img{
+        width: 80%;
+    }
+
+}
+
+
+
+
+
+
+
+
+ @media only screen and (max-width: 1700px) {
+    #wrapper {
+        padding-inline: 5em;
+    }
+
+    header ul {
+        left: 30%;
+    }
+
+} 
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1400px) {
+  
+    main #detailsContainer h1{
+        font-size: 3.5rem;
+    }
+   
+    header ul {
+        left: 20%;
+    }
+
+
+    main #drinksImageContainer img{
+        width: 100%;
+    }
+    
+} 
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1218px) {
+
+    #circle {
+         clip-path: circle(40% at 80% 100%); 
+    }
+   
+    header ul {
+        left: 15%;
+        width: 650px;
+    }
+
+    header ul a{
+        font-size: 1.2rem;
+    }
+
+    main #detailsContainer h1{
+        margin-top: 0;
+        font-size: 2.5rem;
+    }
+
+    main #detailsContainer p {
+        font-size: 1.5rem;
+    }
+    
+
+} 
+
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+   
+    header ul {
+        left: 3%;
+    }
+
+    header ul a{
+        font-size: 1.2rem;
+    }
+
+    #circle {
+        clip-path: circle(40% at 85% 90%); 
+   }
+   
+} 
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 800px) {
+    #circle {
+        clip-path: circle(40% at 70% 105%); 
+   }
+
+    #wrapper {
+        padding-inline: 1em;
+    }
+   
+    header ul {
+        display: none;
+    }
+
+    #burgerEmoji {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        height: 80px;
+        width: 80px;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 5%;
+        cursor: pointer;
+    }
+
+    #burgerEmoji div{
+        height: 10px;
+        width: 80%;
+        background-color: green;
+    }
+
+
+    main {
+        flex-direction: column;
+    }
+
+    main #detailsContainer {
+        margin-bottom: 5em;
+    }
+
+
+    main #drinksImageContainer {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    main #drinksImageContainer img{
+        width: 80%;
+    }
+   
+} 
