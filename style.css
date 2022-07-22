@@ -13,7 +13,7 @@ body {
 #wrapper {
     padding-block: 2em;
     padding-inline: 10em;
-    position: relative;
+    position: relative; 
     z-index: 1;
 }
 
@@ -24,7 +24,7 @@ body {
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-color: red;
+    background-color: green;
     clip-path: circle(40% at 80% 100%);
 }
 
@@ -36,7 +36,6 @@ body {
 header {
     display: flex;
     margin-bottom: 5em;
-    background-color: orange;
     position: relative;
 }
 
@@ -67,6 +66,7 @@ header ul a{
 main {
     display: flex;
     position: relative;
+    margin-bottom: 2em;
 }
 
 main #detailsContainer {
@@ -120,6 +120,7 @@ main #drinksImageContainer img{
     border-bottom-left-radius: 10px;
     flex-direction: column;
     background-color: green;
+    border: 1px solid white;
     
 }
 
@@ -141,12 +142,35 @@ main #drinksImageContainer img{
 
 
 
+/* Third Section Related Stylings */
 
+section {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: blue;
+}
 
+section #drinksSelectorContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    /* position: absolute;
+    left: 50%;
+    transform: translate(-50%); */
+}
 
+section #drinksSelectorContainer img {
+    height: 100px;
+    width: 80px;
+    cursor: pointer;
+    position: relative;
+    bottom: 0px;
+    transition: bottom 0.7s ease-in;
+}
 
-
-
+section #drinksSelectorContainer img:hover {
+    bottom: 40px;
+}
 
 
 
@@ -273,6 +297,11 @@ main #drinksImageContainer img{
     #circle {
         clip-path: circle(40% at 85% 90%); 
    }
+
+   section #drinksSelectorContainer {
+    top: 25px;
+    }
+
    
 } 
 
