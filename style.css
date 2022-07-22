@@ -12,9 +12,8 @@ body {
 
 #wrapper {
     padding-block: 2em;
-    padding-inline: 10em;
-    position: relative; 
-    z-index: 1;
+    padding-inline: 10em;  
+    /* z-index: 1; */
 }
 
 
@@ -26,6 +25,7 @@ body {
     width: 100%;
     background-color: green;
     clip-path: circle(40% at 80% 100%);
+    z-index: -1;
 }
 
 
@@ -35,22 +35,31 @@ body {
 
 header {
     display: flex;
-    margin-bottom: 5em;
+    align-items: center;
     position: relative;
+    margin-bottom: 3em;
 }
 
 
-header ul {
+header  .unorderedListContainer  {
     position: relative;
+    width: 700px;
+    left: 40%;
+}
+
+header  .unorderedListContainer .close {
+    display: none;
+}
+
+header .unorderedListContainer  ul {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 700px;
-    left: 40%;
     list-style: none;
+    padding: 0;
 }
 
-header ul a{
+header .unorderedListContainer ul li a{
    font-size: 1.3rem;
    position: relative;
    text-decoration: none;
@@ -61,12 +70,13 @@ header ul a{
 
 
 
+
 /* Main Related Stylings */
 
 main {
     display: flex;
     position: relative;
-    margin-bottom: 2em;
+    margin-bottom: 4em;
 }
 
 main #detailsContainer {
@@ -147,7 +157,6 @@ main #drinksImageContainer img{
 section {
     display: flex;
     justify-content: space-evenly;
-    background-color: blue;
 }
 
 section #drinksSelectorContainer {
@@ -175,6 +184,61 @@ section #drinksSelectorContainer img:hover {
 
 
 
+/* When Burger Emoji clicked, navigation new styles applied */
+
+
+
+header #navOpened {
+    display: block;
+    position: absolute;
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 1;
+
+}
+
+header #navOpened .open {
+    display: block;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    cursor: pointer;
+}
+
+header #navOpened  ul {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    padding: 0;
+    position: absolute;
+    left: 0;
+}
+
+header #navOpened  ul a{
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -183,7 +247,7 @@ section #drinksSelectorContainer img:hover {
 @media only screen and (max-width: 1880px) {
  
 
-    header ul {
+    header .unorderedListContainer  {
         width: 800px;
         left: 35%;
     }
@@ -211,7 +275,7 @@ section #drinksSelectorContainer img:hover {
         padding-inline: 5em;
     }
 
-    header ul {
+    header .unorderedListContainer  {
         left: 30%;
     }
 
@@ -231,7 +295,7 @@ section #drinksSelectorContainer img:hover {
         font-size: 3.5rem;
     }
    
-    header ul {
+    header .unorderedListContainer  {
         left: 20%;
     }
 
@@ -257,12 +321,12 @@ section #drinksSelectorContainer img:hover {
          clip-path: circle(40% at 80% 100%); 
     }
    
-    header ul {
+    header .unorderedListContainer  {
         left: 15%;
         width: 650px;
     }
 
-    header ul a{
+    header .unorderedListContainer  ul li a{
         font-size: 1.2rem;
     }
 
@@ -286,11 +350,11 @@ section #drinksSelectorContainer img:hover {
 
 @media only screen and (max-width: 1000px) {
    
-    header ul {
+    header .unorderedListContainer  {
         left: 3%;
     }
 
-    header ul a{
+    header .unorderedListContainer ul li a{
         font-size: 1.2rem;
     }
 
@@ -319,9 +383,11 @@ section #drinksSelectorContainer img:hover {
 
     #wrapper {
         padding-inline: 1em;
+        position: static;
     }
-   
-    header ul {
+
+
+    header .unorderedListContainer  {
         display: none;
     }
 
@@ -366,3 +432,6 @@ section #drinksSelectorContainer img:hover {
     }
    
 } 
+
+
+
