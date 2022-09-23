@@ -1,446 +1,365 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: 'Manrope', sans-serif;
-    position: relative;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  position: relative;
 }
 
 #wrapper {
-    padding-block: 2em;
-    padding-inline: 10em;  
-    /* z-index: 1; */
+  padding-block: 2em;
+  padding-inline: 10em;
+  /* z-index: 1; */
 }
-
 
 #circle {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-color: green;
-    clip-path: circle(40% at 80% 100%);
-    z-index: -1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  clip-path: circle(40% at 80% 100%);
+  z-index: -1;
 }
-
-
-
 
 /* Header related stylings */
 
 header {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 3em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3em;
 }
 
-
-header  .unorderedListContainer  {
-    position: relative;
-    width: 700px;
-    left: 40%;
+header .unorderedListContainer {
+  position: relative;
+  width: 700px;
+  left: 40%;
 }
 
-header  .unorderedListContainer .close {
-    display: none;
+header .unorderedListContainer .close {
+  display: none;
 }
 
-header .unorderedListContainer  ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    list-style: none;
-    padding: 0;
+header .unorderedListContainer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+  padding: 0;
 }
 
-header .unorderedListContainer ul li a{
-   font-size: 1.3rem;
-   position: relative;
-   text-decoration: none;
-   color: black;
+header .unorderedListContainer ul li a {
+  font-size: 1.3rem;
+  position: relative;
+  text-decoration: none;
+  color: black;
 }
 
-
-
-
-
+header .unorderedListContainer ul li a:hover {
+  color: green;
+}
 
 /* Main Related Stylings */
 
 main {
-    display: flex;
-    position: relative;
-    margin-bottom: 4em;
+  display: flex;
+  position: relative;
+  margin-bottom: 4em;
 }
 
 main #detailsContainer {
-     flex-basis: 50%; 
+  flex-basis: 50%;
 }
 
 main #detailsContainer h1 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 main #detailsContainer h1 {
-    font-size: 5rem;
+  font-size: 5rem;
 }
 
 main #detailsContainer h1 span {
-    color: green;
+  color: green;
 }
 
 main #detailsContainer p {
-    font-size: 1.8em;
+  font-size: 1.8em;
 }
 
 main #detailsContainer button {
-    height: 50px;
-    width: 180px;
-    border-radius: 100px;
-    background-color: green;
-    font-size: 1rem;
-    color: white;
-    border: none;
-    cursor: pointer;
+  height: 50px;
+  width: 180px;
+  border-radius: 100px;
+  background-color: green;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: width 0.5s ease-in;
 }
 
-
+main #detailsContainer button:hover {
+  width: 200px;
+  filter: brightness(80%);
+}
 
 main #drinksImageContainer {
-     flex-basis: 40%; 
+  flex-basis: 40%;
 }
 
-main #drinksImageContainer img{
-    width: 70%;
+main #drinksImageContainer img {
+  width: 70%;
 }
 
- #socialMediaContainer {
-    position: absolute;
-    top: 50%;
-    right: 0%;
-    display: flex;
-    padding: 1em;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    flex-direction: column;
-    background-color: green;
-    border: 1px solid white;
-    
+#socialMediaContainer {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  display: flex;
+  padding: 1em;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-direction: column;
+  background-color: green;
+  border: 1px solid white;
 }
 
- #socialMediaContainer img:nth-child(1) {
-    height: 28px;
-    width: 24px; 
-    cursor: pointer;
+#socialMediaContainer img:nth-child(1) {
+  height: 28px;
+  width: 24px;
+  cursor: pointer;
 }
-
 
 #socialMediaContainer img:nth-child(2) {
-    margin-block: 2em;
-    width: 28px;
+  margin-block: 2em;
+  width: 28px;
 }
 
 #socialMediaContainer img:nth-child(3) {
-    width: 28px;
+  width: 28px;
 }
-
-
 
 /* Third Section Related Stylings */
 
 section {
-    display: flex;
-    justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 section #drinksSelectorContainer {
-    display: flex;
-    justify-content: space-evenly;
-    width: 400px;
-    /* position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  width: 400px;
+  /* position: absolute;
     left: 50%;
     transform: translate(-50%); */
 }
 
 section #drinksSelectorContainer img {
-    height: 100px;
-    width: 80px;
-    cursor: pointer;
-    position: relative;
-    bottom: 0px;
-    transition: bottom 0.7s ease-in;
+  height: 100px;
+  width: 80px;
+  cursor: pointer;
+  position: relative;
+  bottom: 0px;
+  transition: bottom 0.7s ease-in;
 }
 
 section #drinksSelectorContainer img:hover {
-    bottom: 40px;
+  bottom: 40px;
 }
-
-
-
 
 /* When Burger Emoji clicked, navigation new styles applied */
 
-
-
 header #navOpened {
-    display: block;
-    position: absolute;
-    background-color: green;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    display: flex;
-    justify-content: space-evenly;
-    opacity: 1;
-
+  display: block;
+  position: absolute;
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-evenly;
+  opacity: 1;
 }
 
 header #navOpened .open {
-    display: block;
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    top: 1%;
-    right: 3%;
-    cursor: pointer;
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  cursor: pointer;
 }
 
-header #navOpened  ul {
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 50%;
-    width: 100%;
-    padding: 0;
-    position: absolute;
-    left: 0;
+header #navOpened ul {
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 50%;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  left: 0;
 }
 
-header #navOpened  ul li{
-    width: 100%;
-    height: 100px;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+header #navOpened ul li {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-header #navOpened  ul a{
-    color: white;
-    font-size: 2rem;
+header #navOpened ul a {
+  color: white;
+  font-size: 2rem;
 }
 
-
-header #navOpened  ul li:hover {
-    background-color: rgb(44, 123, 189);
+header #navOpened ul li:hover {
+  background-color: rgb(44, 123, 189);
 }
-
-
-
-
-
-
-
-
-
-
 
 /* Media Queries ----------------- */
 
 @media only screen and (max-width: 1880px) {
- 
+  header .unorderedListContainer {
+    width: 800px;
+    left: 35%;
+  }
 
-    header .unorderedListContainer  {
-        width: 800px;
-        left: 35%;
-    }
+  main #drinksImageContainer {
+    margin-left: 5em;
+  }
 
-
-    main #drinksImageContainer {
-        margin-left: 5em;
-    }
-
-    main #drinksImageContainer img{
-        width: 80%;
-    }
-
+  main #drinksImageContainer img {
+    width: 80%;
+  }
 }
 
+@media only screen and (max-width: 1700px) {
+  #wrapper {
+    padding-inline: 5em;
+  }
 
-
-
-
-
-
-
- @media only screen and (max-width: 1700px) {
-    #wrapper {
-        padding-inline: 5em;
-    }
-
-    header .unorderedListContainer  {
-        left: 30%;
-    }
-
-} 
-
-
-
-
-
-
-
-
+  header .unorderedListContainer {
+    left: 30%;
+  }
+}
 
 @media only screen and (max-width: 1400px) {
-  
-    main #detailsContainer h1{
-        font-size: 3.5rem;
-    }
-   
-    header .unorderedListContainer  {
-        left: 20%;
-    }
+  main #detailsContainer h1 {
+    font-size: 3.5rem;
+  }
 
+  header .unorderedListContainer {
+    left: 20%;
+  }
 
-    main #drinksImageContainer img{
-        width: 100%;
-    }
-    
-} 
-
-
-
-
-
-
-
-
-
+  main #drinksImageContainer img {
+    width: 100%;
+  }
+}
 
 @media only screen and (max-width: 1218px) {
+  #circle {
+    clip-path: circle(40% at 80% 100%);
+  }
 
-    #circle {
-         clip-path: circle(40% at 80% 100%); 
-    }
-   
-    header .unorderedListContainer  {
-        left: 15%;
-        width: 650px;
-    }
+  header .unorderedListContainer {
+    left: 15%;
+    width: 650px;
+  }
 
-    header .unorderedListContainer  ul li a{
-        font-size: 1.2rem;
-    }
+  header .unorderedListContainer ul li a {
+    font-size: 1.2rem;
+  }
 
-    main #detailsContainer h1{
-        margin-top: 0;
-        font-size: 2.5rem;
-    }
+  main #detailsContainer h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+  }
 
-    main #detailsContainer p {
-        font-size: 1.5rem;
-    }
-    
-
-} 
-
-
-
-
-
-
+  main #detailsContainer p {
+    font-size: 1.5rem;
+  }
+}
 
 @media only screen and (max-width: 1000px) {
-   
-    header .unorderedListContainer  {
-        left: 3%;
-    }
+  header .unorderedListContainer {
+    left: 3%;
+  }
 
-    header .unorderedListContainer ul li a{
-        font-size: 1.2rem;
-    }
+  header .unorderedListContainer ul li a {
+    font-size: 1.2rem;
+  }
 
-    #circle {
-        clip-path: circle(40% at 85% 90%); 
-   }
+  #circle {
+    clip-path: circle(40% at 85% 90%);
+  }
 
-   section #drinksSelectorContainer {
+  section #drinksSelectorContainer {
     top: 25px;
-    }
-
-   
-} 
-
-
-
-
-
-
-
+  }
+}
 
 @media only screen and (max-width: 800px) {
-    #circle {
-        clip-path: circle(40% at 70% 105%); 
-   }
+  #circle {
+    clip-path: circle(40% at 70% 105%);
+  }
 
-    #wrapper {
-        padding-inline: 1em;
-        position: static;
-    }
+  #wrapper {
+    padding-inline: 1em;
+    position: static;
+  }
 
+  header .unorderedListContainer {
+    display: none;
+  }
 
-    header .unorderedListContainer  {
-        display: none;
-    }
+  #burgerEmoji {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 5%;
+    cursor: pointer;
+  }
 
-    #burgerEmoji {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        position: absolute;
-        height: 80px;
-        width: 80px;
-        top: 50%;
-        transform: translate(0, -50%);
-        right: 5%;
-        cursor: pointer;
-    }
+  #burgerEmoji div {
+    height: 10px;
+    width: 80%;
+    background-color: green;
+  }
 
-    #burgerEmoji div{
-        height: 10px;
-        width: 80%;
-        background-color: green;
-    }
+  main {
+    flex-direction: column;
+  }
 
+  main #detailsContainer {
+    margin-bottom: 5em;
+  }
 
-    main {
-        flex-direction: column;
-    }
+  main #drinksImageContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+  }
 
-    main #detailsContainer {
-        margin-bottom: 5em;
-    }
-
-
-    main #drinksImageContainer {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 0;
-    }
-
-    main #drinksImageContainer img{
-        width: 80%;
-    }
-   
-} 
-
-
-
+  main #drinksImageContainer img {
+    width: 80%;
+  }
+}
